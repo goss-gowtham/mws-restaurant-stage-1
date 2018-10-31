@@ -145,15 +145,13 @@ resetRestaurants = (restaurants) => {
  * Installing Service Worker.
  */
  if ('serviceWorker' in navigator) {    //https://developers.google.com/web/fundamentals/primers/service-workers/
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('mws-restaurant-stage-1/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
       // registration failed :(
       console.log('ServiceWorker registration failed: ', err);
     });
-  });
 }
 
 
@@ -196,9 +194,10 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex = "3";
-  div.append(more)
-
-  return div
+  button = document.createElement('button');
+  more.append(button);
+  div.append(more);   //as per semantics
+  return div;
 }
 
 /**

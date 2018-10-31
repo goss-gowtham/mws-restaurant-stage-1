@@ -221,6 +221,10 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
 }
+#restaurants-list div a button {
+	display: none;
+}
+
 
 
 /* ====================== Restaurant Details ====================== */
