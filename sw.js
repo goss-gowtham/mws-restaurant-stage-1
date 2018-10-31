@@ -1,4 +1,4 @@
-let cacheName = "simply"
+let cacheName = "simply";
 let cacheFiles = [
   'index.html',
   'restaurant.html',
@@ -10,7 +10,7 @@ let cacheFiles = [
   '/img/*', //selecting all images with *
   '/js/register.js'
 ];
-self.addEventListener("install", function(event) {
+self.addEventListener("install", function(event) {    //discussed and made with https://study-hall.udacity.com/sg-534769-9999/rooms/community:nd001:534769-cohort-9999-project-1090/community:thread-10752682762-265280?contextType=room mentors! That was of GREAT Help!
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
     return cache.addAll(cacheFiles)
@@ -28,7 +28,7 @@ self.addEventListener("fetch", function(event){
       else{
         return fetch(event.request)
           .then(function(response){
-            const clonedResponse = response.clone();
+            const clonedResponse = response.clone();    //referred from https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
             caches.open(cacheName).then(function(cache){
               cache.put(event.request,clonedResponse);
             })
