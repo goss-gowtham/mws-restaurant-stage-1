@@ -50,7 +50,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
-	min-width: 100%;
+	max-width: 100%;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -78,7 +78,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: calc(70% - 80px);
 }
 
 /* Display list items side by side */
@@ -244,7 +244,7 @@ nav h1 a {
   height: 100%;
   width: 100%;
 }
-/*.inside #footer {
+/*.inside #footer {			//referred from https://www.youtube.com/watch?v=92dtrNU1GQc Restaurant Walkthrough with Doug Brown
   bottom: 0;
   position: absolute;
   width: 50%;
@@ -255,7 +255,7 @@ nav h1 a {
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  margin: 15px 30px;
   text-transform: uppercase;
   line-height: 1.1;
 }
@@ -273,7 +273,7 @@ nav h1 a {
   font-weight: 300;
   letter-spacing: 10px;
   margin: 0 0 20px;
-  padding: 2px 0;
+  padding: 0 0 2px 0;
   text-align: center;
   text-transform: uppercase;
 	width: 90%;
@@ -281,8 +281,10 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  /*padding: 140px 40px 30px;*/
+  width: 70%;
+	max-width: 100%;
+
 }
 #reviews-container {
   padding: 30px 40px 40px;
@@ -309,11 +311,9 @@ nav h1 a {
   list-style-type: none;
   margin: 0px 0px 30px 0px;
   overflow: hidden;
-  padding: 0px 10px 40px 20px;
+  padding: 0px 20px 40px 20px;
   position: relative;
-  width: 85%;
-	min-width: 200px;
-	max-width: 40vw;
+
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -321,6 +321,12 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+#restaurant-hours {
+	width: 100%;
+	margin-top: 25px;
+	margin-left: 40px;
+}
+
 
 @media screen and (min-width: 200px && max-width: 1200px) {
 
