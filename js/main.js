@@ -142,6 +142,22 @@ resetRestaurants = (restaurants) => {
 }
 
 /**
+ * Installing Service Worker.
+ */
+ if ('serviceWorker' in navigator) {    //https://developers.google.com/web/fundamentals/primers/service-workers/
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('mws-restaurant-stage-1/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+
+/**
  * Create all restaurants HTML and add them to the webpage.
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
@@ -156,33 +172,33 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const li = document.createElement('li');
+  const div = document.createElement('div');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = DBHelper.imageAltForRestaurant(restaurant);
-  li.append(image);
+  div.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
-  li.append(name);
+  div.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
+  div.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  div.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex = "3";
-  li.append(more)
+  div.append(more)
 
-  return li
+  return div
 }
 
 /**

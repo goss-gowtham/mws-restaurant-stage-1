@@ -152,7 +152,7 @@ nav h1 a {
 }
 
 
-#restaurants-list li {
+#restaurants-list div {
   background-color: #fff;
   border: 2px solid #000;
   font-family: Arial,sans-serif;
@@ -167,12 +167,12 @@ nav h1 a {
 }
 
 @media screen and (min-width: 714px) {
-	#restaurant-list li{
+	#restaurant-list div{
 		max-width: 45%;
 	}
 }
 @media screen and (min-width: 1080px) {
-	#restaurant-list li{
+	#restaurant-list div{
 		max-width: 100px;
 	}
 }
@@ -184,7 +184,7 @@ nav h1 a {
 	height: auto;
 	overflow: hidden;
 }
-#restaurants-list li h1 {
+#restaurants-list div h3 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -206,7 +206,7 @@ nav h1 a {
 	flex-direction: column;
 	justify-content: space-between;
 }
-#restaurants-list li a {
+#restaurants-list div a {
   background-color: blue;
   border-bottom: 3px solid #eee;
   color: #fff;
@@ -304,7 +304,7 @@ nav h1 a {
 	flex-wrap: wrap;
 	justify-content: center;
 }
-#reviews-list li {
+#reviews-list div {
   background-color: #fff;
   border: 2px solid #f3f3f3;
   display: block;
@@ -315,8 +315,8 @@ nav h1 a {
   position: relative;
 
 }
-#reviews-list li p {
-  margin: 0 0 10px;
+#reviews-list div p {
+  margin: 10px 0 10px;
 }
 #restaurant-hours td {
   color: #666;
