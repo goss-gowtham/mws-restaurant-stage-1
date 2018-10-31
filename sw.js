@@ -1,14 +1,27 @@
 let cacheName = "simply";
 let cacheFiles = [
-  'index.html',
-  'restaurant.html',
-  '/css/main.css',
-  '/css/responsive.css',
-  '/js/dbhelper.js',
-  '/js/main.js',
-  '/js/restaurant_info.js',
-  '/img/*', //selecting all images with *
-  '/js/register.js'
+    './',
+  './index.html',
+  './restaurant.html',
+  './offline.html',
+  './css/styles.css',
+  './css/responsive.css',
+  './js/dbhelper.js',
+  './js/main.js',
+  './js/register_sw.js',
+  './js/restaurant_info.js',
+  './data/restaurants.json',
+  './img/1.jpg',
+  './img/2.jpg',
+  './img/3.jpg',
+  './img/4.jpg',
+  './img/5.jpg',
+  './img/6.jpg',
+  './img/7.jpg',
+  './img/8.jpg',
+  './img/9.jpg',
+  './img/10.jpg',
+  './img/fav-icon.png',
 ];
 self.addEventListener("install", function(event) {    //discussed and made with https://study-hall.udacity.com/sg-534769-9999/rooms/community:nd001:534769-cohort-9999-project-1090/community:thread-10752682762-265280?contextType=room mentors! That was of GREAT Help!
   event.waitUntil(

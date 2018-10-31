@@ -170,25 +170,25 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const div = document.createElement('div');
+  const li = document.createElement('li');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = DBHelper.imageAltForRestaurant(restaurant);
-  div.append(image);
+  li.append(image);
 
   const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
-  div.append(name);
+  li.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  div.append(neighborhood);
+  li.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  div.append(address);
+  li.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
@@ -196,8 +196,8 @@ createRestaurantHTML = (restaurant) => {
   more.tabIndex = "3";
   button = document.createElement('button');
   more.append(button);
-  div.append(more);   //as per semantics
-  return div;
+  li.append(more);   //as per semantics
+  return li;
 }
 
 /**
