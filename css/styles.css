@@ -226,11 +226,17 @@ nav h1 a {
 .inside #map-container {
 	background: white none repeat scroll 0 0;
    height: 50vh;
+	 padding: 0;
+	 margin: auto;
+	 justify-content: space-evenly;
 }
 .inside #map {
 	 background-color: #ccc;
    height: 100%;
    width: 100%;
+	 padding: 0;
+	 margin: auto;
+	 justify-content: space-evenly;
 }
 .inside #footer {			//referred from https://www.youtube.com/watch?v=92dtrNU1GQc Restaurant Walkthrough with Doug Brown
   bottom: 0;
@@ -274,6 +280,7 @@ nav h1 a {
 	display: flex;
   flex-direction: column;
   align-items: flex-start;
+	justify-content: space-evenly;
 }
 #reviews-container {
   padding: 30px 40px 40px;
@@ -340,7 +347,7 @@ nav h1 a {
     padding: 30px 15px 40px 30px;
 		max-width: 90%;
 		padding: 0;
-		margin: auto;
+		margin: auto;			/* Discusses from mentors https://study-hall.udacity.com/sg-534769-9999/rooms/community:nd001:534769-cohort-9999-project-1090/community:thread-10752682762-266372?contextType=room*/
   }
 
   #restaurants-list li {
@@ -382,6 +389,8 @@ nav h1 a {
     height: calc(100% - 160px);
     top: 80px;
     width: 50%;
+		padding: 0;
+		margin: auto;
   }
 
   #restaurant-name {
@@ -392,7 +401,7 @@ nav h1 a {
 @media screen and (min-width: 960px) {
   #restaurants-list {
     justify-content: flex-start;
-    padding: 30px 15px 60px 30px;
+    padding: 30px 15px 60px 60px;
   }
 
   #restaurants-list li {
